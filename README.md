@@ -96,7 +96,7 @@ In summary, the `-d` flag allows you to run Docker Compose services in the backg
 
 ## YAML Crash Course for Docker Compose
 
-Docker Compose uses YAML (YAML Ain't Markup Language) to define your multi-container application. YAML is a human-readable data serialization language, similar to JSON, but with a focus on readability. Here's a breakdown to get you started with YAML in Docker Compose:
+Docker Compose uses YAML (YAML Ain't Markup Language) to define your multi-container application. YAML is a human-readable data serialization language, similar to JSON, but with a focus on readability. **YAML is a superset of JSON.** Here's a breakdown to get you started with YAML in Docker Compose:
 
 **Basic Structure:**
 
