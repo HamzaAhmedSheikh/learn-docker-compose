@@ -1,18 +1,14 @@
+# https://agentfactory.panaversity.org/docs/AI-Cloud-Native-Development/docker-for-ai-services/writing-your-first-dockerfile#how-docker-reads-a-dockerfile
 FROM python:3.12-slim
 
-# Copy uv binaries using multi-stage build
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 WORKDIR /app
 
-# Copy project files
-COPY hello-world/pyproject.toml ./pyproject.toml
-
-# Install dependencies
+COPY pyproject.toml .
 RUN uv sync --no-dev
 
-# Copy application code
-COPY hello-world/main.py ./main.py
+COPY main.py .
 
 EXPOSE 8000
 

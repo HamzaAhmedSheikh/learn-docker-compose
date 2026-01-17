@@ -1,9 +1,8 @@
 from fastapi import FastAPI
 
-app = FastAPI()
+app = FastAPI(title="Hello World API")
 
 
-# Create a simple endpoint
-@app.get("/")
-def home():
-    return {"message": "Hello, World World!"}
+@app.get("/health")
+def health_check() -> dict:
+    return {"message": "Hello World!"}

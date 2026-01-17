@@ -2,8 +2,9 @@ name: hello-world-api
 
 services:
     api:
+        image: hello-world-api
         build:
-            context: ./
+            context: ./hello-world
             dockerfile: Dockerfile
         ports:
             - "8000:8000"
